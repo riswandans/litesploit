@@ -28,6 +28,7 @@
 
 
 zend_class_entry *litesploit_intepreter_load_ce;
+zend_class_entry *litesploit_intepreter_statement_ce;
 zend_class_entry *litesploit_intepreter_variables_ce;
 zend_class_entry *litesploit_litesploit_ce;
 
@@ -56,6 +57,7 @@ static PHP_MINIT_FUNCTION(litesploit)
 #endif
 	REGISTER_INI_ENTRIES();
 	ZEPHIR_INIT(Litesploit_Intepreter_Load);
+	ZEPHIR_INIT(Litesploit_Intepreter_Statement);
 	ZEPHIR_INIT(Litesploit_Intepreter_Variables);
 	ZEPHIR_INIT(Litesploit_Litesploit);
 

@@ -5,6 +5,7 @@
 #define ZEPHIR_CLASS_ENTRIES_H
 
 #include "litesploit/intepreter/load.zep.h"
+#include "litesploit/intepreter/statement.zep.h"
 #include "litesploit/intepreter/variables.zep.h"
 #include "litesploit/litesploit.zep.h"
 

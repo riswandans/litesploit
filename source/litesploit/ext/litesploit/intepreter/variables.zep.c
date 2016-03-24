@@ -39,25 +39,25 @@ PHP_METHOD(Litesploit_Intepreter_Variables, loader) {
 	ZEPHIR_SEPARATE_PARAM(litesploit);
 
 
-	ZEPHIR_CALL_SELF(&_0, "variable", &_1, 3, litesploit);
+	ZEPHIR_CALL_SELF(&_0, "variable", &_1, 7, litesploit);
 	zephir_check_call_status();
 	ZEPHIR_CPY_WRT(litesploit, _0);
-	ZEPHIR_CALL_SELF(&_0, "write", &_2, 4, litesploit);
+	ZEPHIR_CALL_SELF(&_0, "write", &_2, 8, litesploit);
 	zephir_check_call_status();
 	ZEPHIR_CPY_WRT(litesploit, _0);
-	ZEPHIR_CALL_SELF(&_0, "runners", &_3, 5, litesploit);
+	ZEPHIR_CALL_SELF(&_0, "runners", &_3, 9, litesploit);
 	zephir_check_call_status();
 	ZEPHIR_CPY_WRT(litesploit, _0);
-	ZEPHIR_CALL_SELF(&_0, "func_function", &_4, 6, litesploit);
+	ZEPHIR_CALL_SELF(&_0, "func_function", &_4, 10, litesploit);
 	zephir_check_call_status();
 	ZEPHIR_CPY_WRT(litesploit, _0);
-	ZEPHIR_CALL_SELF(&_0, "def_function", &_5, 7, litesploit);
+	ZEPHIR_CALL_SELF(&_0, "def_function", &_5, 11, litesploit);
 	zephir_check_call_status();
 	ZEPHIR_CPY_WRT(litesploit, _0);
-	ZEPHIR_CALL_SELF(&_0, "class_function", &_6, 8, litesploit);
+	ZEPHIR_CALL_SELF(&_0, "class_function", &_6, 12, litesploit);
 	zephir_check_call_status();
 	ZEPHIR_CPY_WRT(litesploit, _0);
-	ZEPHIR_CALL_SELF(&_0, "call_function", &_7, 9, litesploit);
+	ZEPHIR_CALL_SELF(&_0, "call_function", &_7, 13, litesploit);
 	zephir_check_call_status();
 	ZEPHIR_CPY_WRT(litesploit, _0);
 	RETVAL_ZVAL(litesploit, 1, 0);
