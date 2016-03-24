@@ -141,11 +141,11 @@ class Variables {
         /**
          * Call usage:
          *<code>
-         *  call name()
+         *  call 
          *</code>
          */
         private static function call_function(litesploit) {
-        let litesploit = preg_replace("/call (.*)\((.*)\)/", "$1($2);", litesploit); // func name()
+        let litesploit = preg_replace("/call (.*)/", "new \$1", litesploit);
         return litesploit;
         }
 }
