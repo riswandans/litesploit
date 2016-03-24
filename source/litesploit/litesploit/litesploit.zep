@@ -9,11 +9,13 @@ class Litesploit {
         
         private static function executecode(location)
         {
-            var litesploit, variables;
+            var litesploit, variables, load;
             let variables = new \Litesploit\Intepreter\Variables();
+            let load = new \Litesploit\Intepreter\Load();
             
             let litesploit = file_get_contents(location, true);
             let litesploit = variables->loader(litesploit);
+            let litesploit = load->loader(litesploit);
             eval(litesploit);
         }
 }

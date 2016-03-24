@@ -39,10 +39,10 @@ PHP_METHOD(Litesploit_Intepreter_Variables, loader) {
 	ZEPHIR_SEPARATE_PARAM(litesploit);
 
 
-	ZEPHIR_CALL_SELF(&_0, "variable", &_1, 1, litesploit);
+	ZEPHIR_CALL_SELF(&_0, "variable", &_1, 3, litesploit);
 	zephir_check_call_status();
 	ZEPHIR_CPY_WRT(litesploit, _0);
-	ZEPHIR_CALL_SELF(&_0, "write", &_2, 2, litesploit);
+	ZEPHIR_CALL_SELF(&_0, "write", &_2, 4, litesploit);
 	zephir_check_call_status();
 	ZEPHIR_CPY_WRT(litesploit, _0);
 	RETVAL_ZVAL(litesploit, 1, 0);
@@ -74,7 +74,7 @@ PHP_METHOD(Litesploit_Intepreter_Variables, write) {
 	ZVAL_STRING(_0, "/write (.*)/", ZEPHIR_TEMP_PARAM_COPY);
 	ZEPHIR_INIT_VAR(_1);
 	ZVAL_STRING(_1, ";echo $1;", ZEPHIR_TEMP_PARAM_COPY);
-	ZEPHIR_CALL_FUNCTION(&_2, "preg_replace", &_3, 3, _0, _1, litesploit);
+	ZEPHIR_CALL_FUNCTION(&_2, "preg_replace", &_3, 2, _0, _1, litesploit);
 	zephir_check_temp_parameter(_0);
 	zephir_check_temp_parameter(_1);
 	zephir_check_call_status();
@@ -83,7 +83,7 @@ PHP_METHOD(Litesploit_Intepreter_Variables, write) {
 	ZVAL_STRING(_0, "/print (.*)/", ZEPHIR_TEMP_PARAM_COPY);
 	ZEPHIR_INIT_NVAR(_1);
 	ZVAL_STRING(_1, ";echo $1;", ZEPHIR_TEMP_PARAM_COPY);
-	ZEPHIR_CALL_FUNCTION(&_2, "preg_replace", &_3, 3, _0, _1, litesploit);
+	ZEPHIR_CALL_FUNCTION(&_2, "preg_replace", &_3, 2, _0, _1, litesploit);
 	zephir_check_temp_parameter(_0);
 	zephir_check_temp_parameter(_1);
 	zephir_check_call_status();
@@ -92,7 +92,7 @@ PHP_METHOD(Litesploit_Intepreter_Variables, write) {
 	ZVAL_STRING(_0, "/return (.*)/", ZEPHIR_TEMP_PARAM_COPY);
 	ZEPHIR_INIT_NVAR(_1);
 	ZVAL_STRING(_1, ";return $1;", ZEPHIR_TEMP_PARAM_COPY);
-	ZEPHIR_CALL_FUNCTION(&_2, "preg_replace", &_3, 3, _0, _1, litesploit);
+	ZEPHIR_CALL_FUNCTION(&_2, "preg_replace", &_3, 2, _0, _1, litesploit);
 	zephir_check_temp_parameter(_0);
 	zephir_check_temp_parameter(_1);
 	zephir_check_call_status();
@@ -125,7 +125,7 @@ PHP_METHOD(Litesploit_Intepreter_Variables, variable) {
 	ZVAL_STRING(_0, "/@(.*) = (.*)/", ZEPHIR_TEMP_PARAM_COPY);
 	ZEPHIR_INIT_VAR(_1);
 	ZVAL_STRING(_1, "$$1 = $2;", ZEPHIR_TEMP_PARAM_COPY);
-	ZEPHIR_CALL_FUNCTION(&_2, "preg_replace", &_3, 3, _0, _1, litesploit);
+	ZEPHIR_CALL_FUNCTION(&_2, "preg_replace", &_3, 2, _0, _1, litesploit);
 	zephir_check_temp_parameter(_0);
 	zephir_check_temp_parameter(_1);
 	zephir_check_call_status();
@@ -134,7 +134,7 @@ PHP_METHOD(Litesploit_Intepreter_Variables, variable) {
 	ZVAL_STRING(_0, "/@(.*)/", ZEPHIR_TEMP_PARAM_COPY);
 	ZEPHIR_INIT_NVAR(_1);
 	ZVAL_STRING(_1, "$$1", ZEPHIR_TEMP_PARAM_COPY);
-	ZEPHIR_CALL_FUNCTION(&_2, "preg_replace", &_3, 3, _0, _1, litesploit);
+	ZEPHIR_CALL_FUNCTION(&_2, "preg_replace", &_3, 2, _0, _1, litesploit);
 	zephir_check_temp_parameter(_0);
 	zephir_check_temp_parameter(_1);
 	zephir_check_call_status();
@@ -143,7 +143,7 @@ PHP_METHOD(Litesploit_Intepreter_Variables, variable) {
 	ZVAL_STRING(_0, "/@(.*) = (.*)/", ZEPHIR_TEMP_PARAM_COPY);
 	ZEPHIR_INIT_NVAR(_1);
 	ZVAL_STRING(_1, "$$1 = $2;", ZEPHIR_TEMP_PARAM_COPY);
-	ZEPHIR_CALL_FUNCTION(&_2, "preg_replace", &_3, 3, _0, _1, litesploit);
+	ZEPHIR_CALL_FUNCTION(&_2, "preg_replace", &_3, 2, _0, _1, litesploit);
 	zephir_check_temp_parameter(_0);
 	zephir_check_temp_parameter(_1);
 	zephir_check_call_status();
@@ -152,7 +152,7 @@ PHP_METHOD(Litesploit_Intepreter_Variables, variable) {
 	ZVAL_STRING(_0, "/@(.*)/", ZEPHIR_TEMP_PARAM_COPY);
 	ZEPHIR_INIT_NVAR(_1);
 	ZVAL_STRING(_1, "$$1", ZEPHIR_TEMP_PARAM_COPY);
-	ZEPHIR_CALL_FUNCTION(&_2, "preg_replace", &_3, 3, _0, _1, litesploit);
+	ZEPHIR_CALL_FUNCTION(&_2, "preg_replace", &_3, 2, _0, _1, litesploit);
 	zephir_check_temp_parameter(_0);
 	zephir_check_temp_parameter(_1);
 	zephir_check_call_status();
@@ -161,7 +161,7 @@ PHP_METHOD(Litesploit_Intepreter_Variables, variable) {
 	ZVAL_STRING(_0, "/@(.*) = (.*)/", ZEPHIR_TEMP_PARAM_COPY);
 	ZEPHIR_INIT_NVAR(_1);
 	ZVAL_STRING(_1, "$$1 = $2;", ZEPHIR_TEMP_PARAM_COPY);
-	ZEPHIR_CALL_FUNCTION(&_2, "preg_replace", &_3, 3, _0, _1, litesploit);
+	ZEPHIR_CALL_FUNCTION(&_2, "preg_replace", &_3, 2, _0, _1, litesploit);
 	zephir_check_temp_parameter(_0);
 	zephir_check_temp_parameter(_1);
 	zephir_check_call_status();
@@ -170,7 +170,7 @@ PHP_METHOD(Litesploit_Intepreter_Variables, variable) {
 	ZVAL_STRING(_0, "/@(.*)/", ZEPHIR_TEMP_PARAM_COPY);
 	ZEPHIR_INIT_NVAR(_1);
 	ZVAL_STRING(_1, "$$1", ZEPHIR_TEMP_PARAM_COPY);
-	ZEPHIR_CALL_FUNCTION(&_2, "preg_replace", &_3, 3, _0, _1, litesploit);
+	ZEPHIR_CALL_FUNCTION(&_2, "preg_replace", &_3, 2, _0, _1, litesploit);
 	zephir_check_temp_parameter(_0);
 	zephir_check_temp_parameter(_1);
 	zephir_check_call_status();
@@ -179,7 +179,7 @@ PHP_METHOD(Litesploit_Intepreter_Variables, variable) {
 	ZVAL_STRING(_0, "/@(.*) = (.*)/", ZEPHIR_TEMP_PARAM_COPY);
 	ZEPHIR_INIT_NVAR(_1);
 	ZVAL_STRING(_1, "$$1 = $2;", ZEPHIR_TEMP_PARAM_COPY);
-	ZEPHIR_CALL_FUNCTION(&_2, "preg_replace", &_3, 3, _0, _1, litesploit);
+	ZEPHIR_CALL_FUNCTION(&_2, "preg_replace", &_3, 2, _0, _1, litesploit);
 	zephir_check_temp_parameter(_0);
 	zephir_check_temp_parameter(_1);
 	zephir_check_call_status();
@@ -188,7 +188,7 @@ PHP_METHOD(Litesploit_Intepreter_Variables, variable) {
 	ZVAL_STRING(_0, "/@(.*)/", ZEPHIR_TEMP_PARAM_COPY);
 	ZEPHIR_INIT_NVAR(_1);
 	ZVAL_STRING(_1, "$$1", ZEPHIR_TEMP_PARAM_COPY);
-	ZEPHIR_CALL_FUNCTION(&_2, "preg_replace", &_3, 3, _0, _1, litesploit);
+	ZEPHIR_CALL_FUNCTION(&_2, "preg_replace", &_3, 2, _0, _1, litesploit);
 	zephir_check_temp_parameter(_0);
 	zephir_check_temp_parameter(_1);
 	zephir_check_call_status();
@@ -197,7 +197,7 @@ PHP_METHOD(Litesploit_Intepreter_Variables, variable) {
 	ZVAL_STRING(_0, "/@(.*) = (.*)/", ZEPHIR_TEMP_PARAM_COPY);
 	ZEPHIR_INIT_NVAR(_1);
 	ZVAL_STRING(_1, "$$1 = $2;", ZEPHIR_TEMP_PARAM_COPY);
-	ZEPHIR_CALL_FUNCTION(&_2, "preg_replace", &_3, 3, _0, _1, litesploit);
+	ZEPHIR_CALL_FUNCTION(&_2, "preg_replace", &_3, 2, _0, _1, litesploit);
 	zephir_check_temp_parameter(_0);
 	zephir_check_temp_parameter(_1);
 	zephir_check_call_status();
@@ -206,7 +206,7 @@ PHP_METHOD(Litesploit_Intepreter_Variables, variable) {
 	ZVAL_STRING(_0, "/@(.*)/", ZEPHIR_TEMP_PARAM_COPY);
 	ZEPHIR_INIT_NVAR(_1);
 	ZVAL_STRING(_1, "$$1", ZEPHIR_TEMP_PARAM_COPY);
-	ZEPHIR_CALL_FUNCTION(&_2, "preg_replace", &_3, 3, _0, _1, litesploit);
+	ZEPHIR_CALL_FUNCTION(&_2, "preg_replace", &_3, 2, _0, _1, litesploit);
 	zephir_check_temp_parameter(_0);
 	zephir_check_temp_parameter(_1);
 	zephir_check_call_status();
@@ -215,7 +215,7 @@ PHP_METHOD(Litesploit_Intepreter_Variables, variable) {
 	ZVAL_STRING(_0, "/@(.*) = (.*)/", ZEPHIR_TEMP_PARAM_COPY);
 	ZEPHIR_INIT_NVAR(_1);
 	ZVAL_STRING(_1, "$$1 = $2;", ZEPHIR_TEMP_PARAM_COPY);
-	ZEPHIR_CALL_FUNCTION(&_2, "preg_replace", &_3, 3, _0, _1, litesploit);
+	ZEPHIR_CALL_FUNCTION(&_2, "preg_replace", &_3, 2, _0, _1, litesploit);
 	zephir_check_temp_parameter(_0);
 	zephir_check_temp_parameter(_1);
 	zephir_check_call_status();
@@ -224,7 +224,7 @@ PHP_METHOD(Litesploit_Intepreter_Variables, variable) {
 	ZVAL_STRING(_0, "/@(.*)/", ZEPHIR_TEMP_PARAM_COPY);
 	ZEPHIR_INIT_NVAR(_1);
 	ZVAL_STRING(_1, "$$1", ZEPHIR_TEMP_PARAM_COPY);
-	ZEPHIR_CALL_FUNCTION(&_2, "preg_replace", &_3, 3, _0, _1, litesploit);
+	ZEPHIR_CALL_FUNCTION(&_2, "preg_replace", &_3, 2, _0, _1, litesploit);
 	zephir_check_temp_parameter(_0);
 	zephir_check_temp_parameter(_1);
 	zephir_check_call_status();
@@ -233,7 +233,7 @@ PHP_METHOD(Litesploit_Intepreter_Variables, variable) {
 	ZVAL_STRING(_0, "/@(.*)/", ZEPHIR_TEMP_PARAM_COPY);
 	ZEPHIR_INIT_NVAR(_1);
 	ZVAL_STRING(_1, "$$1", ZEPHIR_TEMP_PARAM_COPY);
-	ZEPHIR_CALL_FUNCTION(&_2, "preg_replace", &_3, 3, _0, _1, litesploit);
+	ZEPHIR_CALL_FUNCTION(&_2, "preg_replace", &_3, 2, _0, _1, litesploit);
 	zephir_check_temp_parameter(_0);
 	zephir_check_temp_parameter(_1);
 	zephir_check_call_status();
@@ -242,7 +242,7 @@ PHP_METHOD(Litesploit_Intepreter_Variables, variable) {
 	ZVAL_STRING(_0, "/@(.*)/", ZEPHIR_TEMP_PARAM_COPY);
 	ZEPHIR_INIT_NVAR(_1);
 	ZVAL_STRING(_1, "$$1", ZEPHIR_TEMP_PARAM_COPY);
-	ZEPHIR_CALL_FUNCTION(&_2, "preg_replace", &_3, 3, _0, _1, litesploit);
+	ZEPHIR_CALL_FUNCTION(&_2, "preg_replace", &_3, 2, _0, _1, litesploit);
 	zephir_check_temp_parameter(_0);
 	zephir_check_temp_parameter(_1);
 	zephir_check_call_status();
@@ -251,7 +251,7 @@ PHP_METHOD(Litesploit_Intepreter_Variables, variable) {
 	ZVAL_STRING(_0, "/@(.*)/", ZEPHIR_TEMP_PARAM_COPY);
 	ZEPHIR_INIT_NVAR(_1);
 	ZVAL_STRING(_1, "$$1", ZEPHIR_TEMP_PARAM_COPY);
-	ZEPHIR_CALL_FUNCTION(&_2, "preg_replace", &_3, 3, _0, _1, litesploit);
+	ZEPHIR_CALL_FUNCTION(&_2, "preg_replace", &_3, 2, _0, _1, litesploit);
 	zephir_check_temp_parameter(_0);
 	zephir_check_temp_parameter(_1);
 	zephir_check_call_status();
@@ -260,7 +260,7 @@ PHP_METHOD(Litesploit_Intepreter_Variables, variable) {
 	ZVAL_STRING(_0, "/@(.*)/", ZEPHIR_TEMP_PARAM_COPY);
 	ZEPHIR_INIT_NVAR(_1);
 	ZVAL_STRING(_1, "$$1", ZEPHIR_TEMP_PARAM_COPY);
-	ZEPHIR_CALL_FUNCTION(&_2, "preg_replace", &_3, 3, _0, _1, litesploit);
+	ZEPHIR_CALL_FUNCTION(&_2, "preg_replace", &_3, 2, _0, _1, litesploit);
 	zephir_check_temp_parameter(_0);
 	zephir_check_temp_parameter(_1);
 	zephir_check_call_status();
@@ -269,7 +269,7 @@ PHP_METHOD(Litesploit_Intepreter_Variables, variable) {
 	ZVAL_STRING(_0, "/@(.*)/", ZEPHIR_TEMP_PARAM_COPY);
 	ZEPHIR_INIT_NVAR(_1);
 	ZVAL_STRING(_1, "$$1", ZEPHIR_TEMP_PARAM_COPY);
-	ZEPHIR_CALL_FUNCTION(&_2, "preg_replace", &_3, 3, _0, _1, litesploit);
+	ZEPHIR_CALL_FUNCTION(&_2, "preg_replace", &_3, 2, _0, _1, litesploit);
 	zephir_check_temp_parameter(_0);
 	zephir_check_temp_parameter(_1);
 	zephir_check_call_status();
@@ -278,7 +278,7 @@ PHP_METHOD(Litesploit_Intepreter_Variables, variable) {
 	ZVAL_STRING(_0, "/@(.*)/", ZEPHIR_TEMP_PARAM_COPY);
 	ZEPHIR_INIT_NVAR(_1);
 	ZVAL_STRING(_1, "$$1", ZEPHIR_TEMP_PARAM_COPY);
-	ZEPHIR_CALL_FUNCTION(&_2, "preg_replace", &_3, 3, _0, _1, litesploit);
+	ZEPHIR_CALL_FUNCTION(&_2, "preg_replace", &_3, 2, _0, _1, litesploit);
 	zephir_check_temp_parameter(_0);
 	zephir_check_temp_parameter(_1);
 	zephir_check_call_status();
@@ -287,7 +287,7 @@ PHP_METHOD(Litesploit_Intepreter_Variables, variable) {
 	ZVAL_STRING(_0, "/@(.*)/", ZEPHIR_TEMP_PARAM_COPY);
 	ZEPHIR_INIT_NVAR(_1);
 	ZVAL_STRING(_1, "$$1", ZEPHIR_TEMP_PARAM_COPY);
-	ZEPHIR_CALL_FUNCTION(&_2, "preg_replace", &_3, 3, _0, _1, litesploit);
+	ZEPHIR_CALL_FUNCTION(&_2, "preg_replace", &_3, 2, _0, _1, litesploit);
 	zephir_check_temp_parameter(_0);
 	zephir_check_temp_parameter(_1);
 	zephir_check_call_status();
@@ -296,7 +296,7 @@ PHP_METHOD(Litesploit_Intepreter_Variables, variable) {
 	ZVAL_STRING(_0, "/@(.*)/", ZEPHIR_TEMP_PARAM_COPY);
 	ZEPHIR_INIT_NVAR(_1);
 	ZVAL_STRING(_1, "$$1", ZEPHIR_TEMP_PARAM_COPY);
-	ZEPHIR_CALL_FUNCTION(&_2, "preg_replace", &_3, 3, _0, _1, litesploit);
+	ZEPHIR_CALL_FUNCTION(&_2, "preg_replace", &_3, 2, _0, _1, litesploit);
 	zephir_check_temp_parameter(_0);
 	zephir_check_temp_parameter(_1);
 	zephir_check_call_status();
@@ -305,7 +305,7 @@ PHP_METHOD(Litesploit_Intepreter_Variables, variable) {
 	ZVAL_STRING(_0, "/const (.*) = (.*)/", ZEPHIR_TEMP_PARAM_COPY);
 	ZEPHIR_INIT_NVAR(_1);
 	ZVAL_STRING(_1, "const $1 = $2;", ZEPHIR_TEMP_PARAM_COPY);
-	ZEPHIR_CALL_FUNCTION(&_2, "preg_replace", &_3, 3, _0, _1, litesploit);
+	ZEPHIR_CALL_FUNCTION(&_2, "preg_replace", &_3, 2, _0, _1, litesploit);
 	zephir_check_temp_parameter(_0);
 	zephir_check_temp_parameter(_1);
 	zephir_check_call_status();
