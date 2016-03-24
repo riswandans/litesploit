@@ -1,56 +1,51 @@
-<?php
-namespace \Litesploit\Libs\Network;
+namespace Litesploit\Libs\Network;
+
 class Telnet
 {
-    var uSleepTime = 1250000;
-    var loginSleepTime = 1000000;
-    var connection = null;
-    var server = null;
-    var port = null;
-    var username = null;
-    var password = null;
-    var loginPrompt;
-    var connMessage1;
-    var connMessage2;
+    public uSleepTime = 1250000;
+    public loginSleepTime = 1000000;
+    public connection = null;
+    public server = null;
+    public port = null;
+    public username = null;
+    public password = null;
+    public loginPrompt;
+    public connMessage1;
+    public connMessage2;
     const ERROR_0 = "success";
     CONST ERROR_1 = "couldn't open network connection";
     const ERROR_2 = "unknown host";
     const ERROR_3 = "login failed";
     public function __construct(server, port, username = null, password = null)
     {
-        // we need php 5 obviously
-        if (version_compare(phpversion(), '5.0', '<')) {
-            // throw new \Exception('PhpTelnet\'s Client needs PHP 5+ to work.');
-        } else {
-            this->server = server;
-            this->port = port;
-            this->username = username;
-            this->password = password;
-        }
+            let this->server = server;
+            let this->port = port;
+            let this->username = username;
+            let this->password = password;
     }
-    function connect()
+    public function connect()
     {
-        if (this->connection === NULL) {
+        if (this->connection == NULL) {
             
             var errorNumber = 0;
-            
-            if (this->connection = fsockopen(this->server, this->port, errno, errstr, 5)) {
+            var errno,errstr,r;
+            if (this->connection == fsockopen(this->server, this->port, errno, errstr, 5)) {
                 
                 if (this->username !== null || this->password !== null) {
                     
                     let r = this->getResponse();
                     let r = explode("\n", r);
-                    this->loginPrompt = r[count(r) - 1];
+                    let this->loginPrompt = r[count(r) - 1];
                     
                     fputs(this->connection, this->username . "\r");
-                    this->sleep();
+                    self::sleep();
                     
                     fputs(this->connection, this->password . "\r");
-                    this->sleep(this->loginSleepTime);
+                    self::sleep(this->loginSleepTime);
                     
                     let r = this->getResponse();
                     let r = explode("\n", r);
-                    if ((r[count(r) - 1] == '') || (this->loginPrompt == r[count(r) - 1])) {
+                    if ((r[count(r) - 1] == "") || (this->loginPrompt == r[count(r) - 1])) {
                         let errorNumber = 3;
                         this->disconnect();
                     }
@@ -66,17 +61,20 @@ class Telnet
             return true;
         }
     }
-    function disconnect(exit = 'exit')
+    public function disconnect(exit = "exit")
     {
         if (this->connection) {
             if (exit)
+            {
                 this->execute(exit);
-            fclose(this->connection);
-            this->connection = NULL;
+                fclose(this->connection);
+                let this->connection = NULL;
+            }
         }
     }
     public function execute(cmd)
     {
+        var r;
         this->connect();
         fwrite(this->connection, cmd . "\r\n");
         this->sleep();
@@ -85,26 +83,27 @@ class Telnet
     }
     private function removeNonPrintableCharacters(str)
     {
-        return preg_replace('/[\x00-\x09\x0B\x0C\x0E-\x1F\x7F]/', '', str);
+        return preg_replace("/[\x00-\x09\x0B\x0C\x0E-\x1F\x7F]/", "", str);
     }
-    function getResponse()
+    public function getResponse()
     {
-        let r = '';
+        var r,s;
+        let r = "";
         do {
             let r .= fread(this->connection, 1000);
             let s = socket_get_status(this->connection);
-        } while (s['unread_bytes']);
+        } while (s["unread_bytes"]);
         return this->removeNonPrintableCharacters(r);
     }
-    function sleep(sleepTime = null)
+    public function sleep(sleepTime = null)
     {
         if (sleepTime === null) {
             usleep(this->uSleepTime);
         } else {
-            usleep(this->sleepTime);
+            usleep(this->uSleepTime);
         }
     }
-    function throwConnectError(num)
+    private function throwConnectError(num)
     {
         // throw new \Exception(constant('ERROR_' . num));
     }
