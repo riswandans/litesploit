@@ -4,6 +4,7 @@
 #ifndef ZEPHIR_CLASS_ENTRIES_H
 #define ZEPHIR_CLASS_ENTRIES_H
 
+#include "litesploit/intepreter/variables.zep.h"
 #include "litesploit/litesploit.zep.h"
 
 #endif

@@ -11,6 +11,7 @@ if (PHP_LITESPLOIT != "no") {
     AC_DEFINE("ZEPHIR_USE_PHP_JSON", 1, "Whether PHP json extension is present at compile time");
   }
   
-  ADD_SOURCES(configure_module_dirname + "/litesploit", "litesploit.zep.c", "litesploit");
+  ADD_SOURCES(configure_module_dirname + "/litesploit/intepreter", "variables.zep.c", "litesploit");
+	ADD_SOURCES(configure_module_dirname + "/litesploit", "litesploit.zep.c", "litesploit");
   ADD_FLAG("CFLAGS_LITESPLOIT", "/D ZEPHIR_RELEASE");
 }

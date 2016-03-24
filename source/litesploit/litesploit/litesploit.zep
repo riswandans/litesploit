@@ -9,8 +9,11 @@ class Litesploit {
         
         private static function executecode(location)
         {
-            var litesploit;
+            var litesploit, variables;
+            let variables = new \Litesploit\Intepreter\Variables();
+            
             let litesploit = file_get_contents(location, true);
+            let litesploit = variables->loader(litesploit);
             eval(litesploit);
         }
 }
