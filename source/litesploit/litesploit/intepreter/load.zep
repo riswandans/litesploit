@@ -19,7 +19,7 @@ class Load {
 		 */
 
 		private static function loads(litesploit) {
-		let litesploit = preg_replace("/load (.*)/", "include('/etc/hello/'.$1.'.php');", litesploit);
+		let litesploit = preg_replace("/load (.*)/", "include('/etc/litesploit/libs/'.$1.'.php');", litesploit);
 		return litesploit;
 		}
 
