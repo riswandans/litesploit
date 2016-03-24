@@ -622,7 +622,7 @@ PHP_METHOD(Litesploit_Intepreter_Variables, call_function) {
 	ZEPHIR_INIT_VAR(_0);
 	ZVAL_STRING(_0, "/call (.*)/", ZEPHIR_TEMP_PARAM_COPY);
 	ZEPHIR_INIT_VAR(_1);
-	ZVAL_STRING(_1, "new \\$1", ZEPHIR_TEMP_PARAM_COPY);
+	ZVAL_STRING(_1, "new $1", ZEPHIR_TEMP_PARAM_COPY);
 	ZEPHIR_CALL_FUNCTION(&_2, "preg_replace", NULL, 2, _0, _1, litesploit);
 	zephir_check_temp_parameter(_0);
 	zephir_check_temp_parameter(_1);

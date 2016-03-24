@@ -145,7 +145,7 @@ class Variables {
          *</code>
          */
         private static function call_function(litesploit) {
-        let litesploit = preg_replace("/call (.*)/", "new \$1", litesploit);
+        let litesploit = preg_replace("/call (.*)/", "new $1", litesploit);
         return litesploit;
         }
 }
