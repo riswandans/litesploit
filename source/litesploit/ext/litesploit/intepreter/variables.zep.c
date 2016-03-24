@@ -30,7 +30,7 @@ ZEPHIR_INIT_CLASS(Litesploit_Intepreter_Variables) {
 PHP_METHOD(Litesploit_Intepreter_Variables, loader) {
 
 	int ZEPHIR_LAST_CALL_STATUS;
-	zephir_fcall_cache_entry *_1 = NULL, *_2 = NULL;
+	zephir_fcall_cache_entry *_1 = NULL, *_2 = NULL, *_3 = NULL;
 	zval *litesploit = NULL, *_0 = NULL;
 
 	ZEPHIR_MM_GROW();
@@ -43,6 +43,9 @@ PHP_METHOD(Litesploit_Intepreter_Variables, loader) {
 	zephir_check_call_status();
 	ZEPHIR_CPY_WRT(litesploit, _0);
 	ZEPHIR_CALL_SELF(&_0, "write", &_2, 4, litesploit);
+	zephir_check_call_status();
+	ZEPHIR_CPY_WRT(litesploit, _0);
+	ZEPHIR_CALL_SELF(&_0, "runners", &_3, 5, litesploit);
 	zephir_check_call_status();
 	ZEPHIR_CPY_WRT(litesploit, _0);
 	RETVAL_ZVAL(litesploit, 1, 0);
@@ -93,6 +96,37 @@ PHP_METHOD(Litesploit_Intepreter_Variables, write) {
 	ZEPHIR_INIT_NVAR(_1);
 	ZVAL_STRING(_1, ";return $1;", ZEPHIR_TEMP_PARAM_COPY);
 	ZEPHIR_CALL_FUNCTION(&_2, "preg_replace", &_3, 2, _0, _1, litesploit);
+	zephir_check_temp_parameter(_0);
+	zephir_check_temp_parameter(_1);
+	zephir_check_call_status();
+	ZEPHIR_CPY_WRT(litesploit, _2);
+	RETVAL_ZVAL(litesploit, 1, 0);
+	RETURN_MM();
+
+}
+
+/**
+ * Run usage:
+ *<code>
+ *      run @litesploit->function
+ *</code>
+ */
+PHP_METHOD(Litesploit_Intepreter_Variables, runners) {
+
+	int ZEPHIR_LAST_CALL_STATUS;
+	zval *litesploit = NULL, *_0, *_1, *_2 = NULL;
+
+	ZEPHIR_MM_GROW();
+	zephir_fetch_params(1, 1, 0, &litesploit);
+
+	ZEPHIR_SEPARATE_PARAM(litesploit);
+
+
+	ZEPHIR_INIT_VAR(_0);
+	ZVAL_STRING(_0, "/run (.*)/", ZEPHIR_TEMP_PARAM_COPY);
+	ZEPHIR_INIT_VAR(_1);
+	ZVAL_STRING(_1, "$1;", ZEPHIR_TEMP_PARAM_COPY);
+	ZEPHIR_CALL_FUNCTION(&_2, "preg_replace", NULL, 2, _0, _1, litesploit);
 	zephir_check_temp_parameter(_0);
 	zephir_check_temp_parameter(_1);
 	zephir_check_call_status();

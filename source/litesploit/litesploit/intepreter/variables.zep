@@ -8,8 +8,10 @@ class Variables {
         private static function loader(litesploit) {
         let litesploit = self::variable(litesploit);
         let litesploit = self::write(litesploit);
+        let litesploit = self::runners(litesploit);
         return litesploit;
         }
+        
 
         /**
          * Print usage:
@@ -26,6 +28,19 @@ class Variables {
         let litesploit = preg_replace("/return (.*)/", ";return $1;", litesploit);
         return litesploit;
         }
+        
+        
+        /**
+         * Run usage:
+         *<code>
+         *      run @litesploit->function
+         *</code>
+         */
+
+        private static function runners(litesploit){
+        let litesploit = preg_replace("/run (.*)/", "$1;", litesploit);
+        return litesploit;
+        }
 
         /**
          * Variable usage:
@@ -34,27 +49,28 @@ class Variables {
          *      print @hello
          *</code>
          */
+         
         private static function variable(litesploit) {
         let litesploit = preg_replace("/@(.*) = (.*)/", "$$1 = $2;", litesploit); 
-        let litesploit = preg_replace("/@(.*)/", "$$1", litesploit); // @text
+        let litesploit = preg_replace("/@(.*)/", "$$1", litesploit); 
         let litesploit = preg_replace("/@(.*) = (.*)/", "$$1 = $2;", litesploit); 
-        let litesploit = preg_replace("/@(.*)/", "$$1", litesploit); // @text
+        let litesploit = preg_replace("/@(.*)/", "$$1", litesploit); 
         let litesploit = preg_replace("/@(.*) = (.*)/", "$$1 = $2;", litesploit); 
-        let litesploit = preg_replace("/@(.*)/", "$$1", litesploit); // @text
+        let litesploit = preg_replace("/@(.*)/", "$$1", litesploit); 
         let litesploit = preg_replace("/@(.*) = (.*)/", "$$1 = $2;", litesploit); 
-        let litesploit = preg_replace("/@(.*)/", "$$1", litesploit); // @text
+        let litesploit = preg_replace("/@(.*)/", "$$1", litesploit); 
         let litesploit = preg_replace("/@(.*) = (.*)/", "$$1 = $2;", litesploit); 
-        let litesploit = preg_replace("/@(.*)/", "$$1", litesploit); // @text
+        let litesploit = preg_replace("/@(.*)/", "$$1", litesploit); 
         let litesploit = preg_replace("/@(.*) = (.*)/", "$$1 = $2;", litesploit); 
-        let litesploit = preg_replace("/@(.*)/", "$$1", litesploit); // var text
-        let litesploit = preg_replace("/@(.*)/", "$$1", litesploit); // @variable
-        let litesploit = preg_replace("/@(.*)/", "$$1", litesploit); // @variable
-        let litesploit = preg_replace("/@(.*)/", "$$1", litesploit); // @variable
-        let litesploit = preg_replace("/@(.*)/", "$$1", litesploit); // @variable
-        let litesploit = preg_replace("/@(.*)/", "$$1", litesploit); // @variable
-        let litesploit = preg_replace("/@(.*)/", "$$1", litesploit); // @variable
-        let litesploit = preg_replace("/@(.*)/", "$$1", litesploit); // @variable
-        let litesploit = preg_replace("/@(.*)/", "$$1", litesploit); // @variable
+        let litesploit = preg_replace("/@(.*)/", "$$1", litesploit); 
+        let litesploit = preg_replace("/@(.*)/", "$$1", litesploit); 
+        let litesploit = preg_replace("/@(.*)/", "$$1", litesploit); 
+        let litesploit = preg_replace("/@(.*)/", "$$1", litesploit); 
+        let litesploit = preg_replace("/@(.*)/", "$$1", litesploit); 
+        let litesploit = preg_replace("/@(.*)/", "$$1", litesploit); 
+        let litesploit = preg_replace("/@(.*)/", "$$1", litesploit); 
+        let litesploit = preg_replace("/@(.*)/", "$$1", litesploit); 
+        let litesploit = preg_replace("/@(.*)/", "$$1", litesploit);
         let litesploit = preg_replace("/const (.*) = (.*)/", "const $1 = $2;", litesploit);
         return litesploit;
         }
