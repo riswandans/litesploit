@@ -1,0 +1,3 @@
+<?php
+use Litesploit\Litesploit;
+Litesploit::engine($argv[1]);
