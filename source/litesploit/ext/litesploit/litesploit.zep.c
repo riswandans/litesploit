@@ -35,7 +35,7 @@ PHP_METHOD(Litesploit_Litesploit, engine) {
 
 
 
-	ZEPHIR_CALL_SELF(NULL, "executecode", &_0, 9, location);
+	ZEPHIR_CALL_SELF(NULL, "executecode", &_0, 1, location);
 	zephir_check_call_status();
 	ZEPHIR_MM_RESTORE();
 
@@ -51,7 +51,7 @@ PHP_METHOD(Litesploit_Litesploit, executecode) {
 
 
 
-	ZEPHIR_CALL_FUNCTION(&litesploit, "file_get_contents", NULL, 10, location, ZEPHIR_GLOBAL(global_true));
+	ZEPHIR_CALL_FUNCTION(&litesploit, "file_get_contents", NULL, 2, location, ZEPHIR_GLOBAL(global_true));
 	zephir_check_call_status();
 	ZEPHIR_INIT_VAR(_0);
 	zephir_eval_php(litesploit, _0, "/home/ubuntu/workspace/litesploit/source/litesploit/litesploit/litesploit.zep:14" TSRMLS_CC);

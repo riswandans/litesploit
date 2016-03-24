@@ -27,7 +27,6 @@
 
 
 
-zend_class_entry *litesploit_libs_network_telnet_ce;
 zend_class_entry *litesploit_litesploit_ce;
 
 ZEND_DECLARE_MODULE_GLOBALS(litesploit)
@@ -54,7 +53,6 @@ static PHP_MINIT_FUNCTION(litesploit)
 	setlocale(LC_ALL, "C");
 #endif
 	REGISTER_INI_ENTRIES();
-	ZEPHIR_INIT(Litesploit_Libs_Network_Telnet);
 	ZEPHIR_INIT(Litesploit_Litesploit);
 
 #if PHP_VERSION_ID < 50500
