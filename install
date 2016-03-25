@@ -11,6 +11,6 @@ sudo sh -c "echo 'extension=litesploit.so' >> /etc/php5/cli/conf.d/litesploit.in
 
 sudo mkdir /etc/litesploit
 
-sudo cp -r app /etc/litesploit/app
-sudo cp -r libs /etc/litesploit/libs
-sudo cp -r exploit /etc/litesploit/exploit
+sudo cp -r app /etc/litesploit/
+sudo cp -r libs /etc/litesploit/
+sudo cp -r exploit /etc/litesploit
