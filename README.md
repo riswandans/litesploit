@@ -1,5 +1,6 @@
 ### Litesploit
-  _        _   _                          _           _   _   
+```
+_        _   _                          _           _   _   
  | |      (_) | |                        | |         (_) | |  
  | |       _  | |_    ___   ___   _ __   | |   ___    _  | |_ 
  | |      | | | __|  / _ \ / __| | '_ \  | |  / _ \  | | | __|
@@ -8,6 +9,7 @@
                                  | |                          
                                  |_|    
 
+```
 
 Litesploit is a library and intepreter for penetration testing tools
 
