@@ -31,6 +31,7 @@ zend_class_entry *litesploit_intepreter_libs_ce;
 zend_class_entry *litesploit_intepreter_load_ce;
 zend_class_entry *litesploit_intepreter_statement_ce;
 zend_class_entry *litesploit_intepreter_variables_ce;
+zend_class_entry *litesploit_libs_http_curl_ce;
 zend_class_entry *litesploit_libs_network_telnet_ce;
 zend_class_entry *litesploit_litesploit_ce;
 
@@ -62,6 +63,7 @@ static PHP_MINIT_FUNCTION(litesploit)
 	ZEPHIR_INIT(Litesploit_Intepreter_Load);
 	ZEPHIR_INIT(Litesploit_Intepreter_Statement);
 	ZEPHIR_INIT(Litesploit_Intepreter_Variables);
+	ZEPHIR_INIT(Litesploit_Libs_Http_Curl);
 	ZEPHIR_INIT(Litesploit_Libs_Network_Telnet);
 	ZEPHIR_INIT(Litesploit_Litesploit);
 

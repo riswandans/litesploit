@@ -8,6 +8,7 @@
 #include "litesploit/intepreter/load.zep.h"
 #include "litesploit/intepreter/statement.zep.h"
 #include "litesploit/intepreter/variables.zep.h"
+#include "litesploit/libs/http/curl.zep.h"
 #include "litesploit/libs/network/telnet.zep.h"
 #include "litesploit/litesploit.zep.h"
 
