@@ -1,6 +1,23 @@
 ### Litesploit
 Litesploit is a library and intepreter for penetration testing tools
 
+### Requirement
+```
+* PHP 5 or higher
+* GCC
+* Zephir lang
+* PHP-Dev
+* libpcre3-dev
+```
+
+### Installation
+this installation only work for Ubuntu and debian
+```bash
+git clone https://github.com/devilscream/litesploit.git
+cd litesploit
+./install
+```
+
 ### License
 
 The MIT License (MIT)
