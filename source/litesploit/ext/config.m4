@@ -9,9 +9,11 @@ if test "$PHP_LITESPLOIT" = "yes"; then
 	fi
 
 	AC_DEFINE(HAVE_LITESPLOIT, 1, [Whether you have Litesploit])
-	litesploit_sources="litesploit.c kernel/main.c kernel/memory.c kernel/exception.c kernel/hash.c kernel/debug.c kernel/backtrace.c kernel/object.c kernel/array.c kernel/extended/array.c kernel/string.c kernel/fcall.c kernel/extended/fcall.c kernel/require.c kernel/file.c kernel/operators.c kernel/math.c kernel/concat.c kernel/variables.c kernel/filter.c kernel/iterator.c kernel/time.c kernel/exit.c litesploit/intepreter/load.zep.c
+	litesploit_sources="litesploit.c kernel/main.c kernel/memory.c kernel/exception.c kernel/hash.c kernel/debug.c kernel/backtrace.c kernel/object.c kernel/array.c kernel/extended/array.c kernel/string.c kernel/fcall.c kernel/extended/fcall.c kernel/require.c kernel/file.c kernel/operators.c kernel/math.c kernel/concat.c kernel/variables.c kernel/filter.c kernel/iterator.c kernel/time.c kernel/exit.c litesploit/intepreter/libs.zep.c
+	litesploit/intepreter/load.zep.c
 	litesploit/intepreter/statement.zep.c
 	litesploit/intepreter/variables.zep.c
+	litesploit/libs/network/telnet.zep.c
 	litesploit/litesploit.zep.c "
 	PHP_NEW_EXTENSION(litesploit, $litesploit_sources, $ext_shared,, )
 	PHP_SUBST(LITESPLOIT_SHARED_LIBADD)
