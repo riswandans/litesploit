@@ -1,0 +1,16 @@
+cd source/litesploit
+
+zephir fullclean
+zephir build
+
+cd ../..
+
+sudo rm /etc/php5/cli/conf.d/litesploit.ini
+sudo touch /etc/php5/cli/conf.d/litesploit.ini
+sudo sh -c "echo 'extension=litesploit.so' >> /etc/php5/cli/conf.d/litesploit.ini"
+
+sudo mkdir /etc/litesploit
+
+sudo cp -r app /etc/litesploit/app
+sudo cp -r libs /etc/litesploit/libs
+sudo cp -r exploit /etc/litesploit/exploit
