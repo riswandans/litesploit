@@ -20,3 +20,8 @@ sudo mkdir /etc/litesploit
 sudo cp -r app /etc/litesploit/
 sudo cp -r libs /etc/litesploit/
 sudo cp -r exploits /etc/litesploit
+sudo cp -r bin/litesploit /usr/bin/litesploit
+
+sudo chmod +x /usr/bin/litesploit
+
+echo "Install completed"
