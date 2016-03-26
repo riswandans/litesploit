@@ -11,7 +11,7 @@
     return file_get_contents($dir."/".$location, true);
     }
     
-    function extension($location) {
+    function file_extension($location) {
     $dir = "/etc/litesploit/tmp/";
     return pathinfo($dir."/".$location, PATHINFO_EXTENSION);
     }
@@ -28,7 +28,7 @@
     }
     }
     
-    function rename($location, $newname) {
+    function file_rename($location, $newname) {
     $dir = "/etc/litesploit/tmp/";
     if (!rename($dir."/".$location, $dir."/".$newname)) {
     	echo "failed to rename...\n";
