@@ -6,7 +6,7 @@
     fclose($file);
     }
     
-    function file_ead($location) {
+    function file_read($location) {
     $dir = "/etc/litesploit/tmp/";
     return file_get_contents($dir."/".$location, true);
     }
