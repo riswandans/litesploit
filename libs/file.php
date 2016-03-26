@@ -1,43 +1,36 @@
 <?php
     function file_create($location, $content) {
-    $dir = "/etc/litesploit/tmp/";
-    $file = fopen($dir."/".$location,"w");
+    $file = fopen($location,"w");
     fwrite($file, $content);
     fclose($file);
     }
     
     function file_read($location) {
-    $dir = "/etc/litesploit/tmp/";
-    return file_get_contents($dir."/".$location, true);
+    return file_get_contents($location, true);
     }
     
     function file_extension($location) {
-    $dir = "/etc/litesploit/tmp/";
-    return pathinfo($dir."/".$location, PATHINFO_EXTENSION);
+    return pathinfo($location, PATHINFO_EXTENSION);
     }
     
     function file_time($format, $location) {
-    $dir = "/etc/litesploit/tmp/";
-    return date($format, filemtime($dir."/".$location));
+    return date($format, filemtime($location));
     }
     
     function file_copy($location, $newlocation) {
-    $dir = "/etc/litesploit/tmp/";
-    if (!copy($dir."/".$location, $dir."/".$newlocation)) {
+    if (!copy($location, $newlocation)) {
     	echo "failed to copy...\n";
     }
     }
     
     function file_rename($location, $newname) {
-    $dir = "/etc/litesploit/tmp/";
-    if (!rename($dir."/".$location, $dir."/".$newname)) {
+    if (!rename($location, $newname)) {
     	echo "failed to rename...\n";
     }
     }
     
     function file_delete($location) {
-    $dir = "/etc/litesploit/tmp/";
-    if (!unlink($dir."/".$location)) {
+    if (!unlink($location)) {
     	echo "failed to delete...\n";
     }
     }
