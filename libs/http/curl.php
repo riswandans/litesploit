@@ -21,5 +21,16 @@
     curl_close($ch);
     return $result;
     }
+    
+    function curl_download($url, $savelocation){
+    $savelocation = fopen ($savelocation, 'w+');
+    $ch = curl_init(str_replace(" ","%20",$location));
+    curl_setopt($ch, CURLOPT_TIMEOUT, 50);
+    curl_setopt($ch, CURLOPT_FILE, $savelocation);
+    curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
+    $result = curl_exec($ch);//get curl response
+    curl_close($ch);
+    return $result;
+    }
 
 ?>
