@@ -41,7 +41,7 @@ PHP_METHOD(Litesploit_Libs_Network_Telnet, loader) {
 	ZVAL_STRING(_0, "/telnet.server\\((.*)\\)/", ZEPHIR_TEMP_PARAM_COPY);
 	ZEPHIR_INIT_VAR(_1);
 	ZVAL_STRING(_1, "$telnetserver = $1;", ZEPHIR_TEMP_PARAM_COPY);
-	ZEPHIR_CALL_FUNCTION(&_2, "preg_replace", &_3, 5, _0, _1, litesploit);
+	ZEPHIR_CALL_FUNCTION(&_2, "preg_replace", &_3, 6, _0, _1, litesploit);
 	zephir_check_temp_parameter(_0);
 	zephir_check_temp_parameter(_1);
 	zephir_check_call_status();
@@ -50,7 +50,7 @@ PHP_METHOD(Litesploit_Libs_Network_Telnet, loader) {
 	ZVAL_STRING(_0, "/telnet.port\\((.*)\\)/", ZEPHIR_TEMP_PARAM_COPY);
 	ZEPHIR_INIT_NVAR(_1);
 	ZVAL_STRING(_1, "$telnetport = $1;", ZEPHIR_TEMP_PARAM_COPY);
-	ZEPHIR_CALL_FUNCTION(&_2, "preg_replace", &_3, 5, _0, _1, litesploit);
+	ZEPHIR_CALL_FUNCTION(&_2, "preg_replace", &_3, 6, _0, _1, litesploit);
 	zephir_check_temp_parameter(_0);
 	zephir_check_temp_parameter(_1);
 	zephir_check_call_status();
@@ -59,7 +59,7 @@ PHP_METHOD(Litesploit_Libs_Network_Telnet, loader) {
 	ZVAL_STRING(_0, "/telnet.username\\((.*)\\)/", ZEPHIR_TEMP_PARAM_COPY);
 	ZEPHIR_INIT_NVAR(_1);
 	ZVAL_STRING(_1, "$telnetusername = $1;", ZEPHIR_TEMP_PARAM_COPY);
-	ZEPHIR_CALL_FUNCTION(&_2, "preg_replace", &_3, 5, _0, _1, litesploit);
+	ZEPHIR_CALL_FUNCTION(&_2, "preg_replace", &_3, 6, _0, _1, litesploit);
 	zephir_check_temp_parameter(_0);
 	zephir_check_temp_parameter(_1);
 	zephir_check_call_status();
@@ -68,7 +68,7 @@ PHP_METHOD(Litesploit_Libs_Network_Telnet, loader) {
 	ZVAL_STRING(_0, "/telnet.password\\((.*)\\)/", ZEPHIR_TEMP_PARAM_COPY);
 	ZEPHIR_INIT_NVAR(_1);
 	ZVAL_STRING(_1, "$telnetpassword = $1;", ZEPHIR_TEMP_PARAM_COPY);
-	ZEPHIR_CALL_FUNCTION(&_2, "preg_replace", &_3, 5, _0, _1, litesploit);
+	ZEPHIR_CALL_FUNCTION(&_2, "preg_replace", &_3, 6, _0, _1, litesploit);
 	zephir_check_temp_parameter(_0);
 	zephir_check_temp_parameter(_1);
 	zephir_check_call_status();
@@ -84,7 +84,7 @@ PHP_METHOD(Litesploit_Libs_Network_Telnet, loader) {
 	ZVAL_STRING(_0, "/telnet.execute\\((.*)\\)/", ZEPHIR_TEMP_PARAM_COPY);
 	ZEPHIR_INIT_NVAR(_1);
 	ZVAL_STRING(_1, "$telnet->execute($1)", ZEPHIR_TEMP_PARAM_COPY);
-	ZEPHIR_CALL_FUNCTION(&_2, "preg_replace", &_3, 5, _0, _1, litesploit);
+	ZEPHIR_CALL_FUNCTION(&_2, "preg_replace", &_3, 6, _0, _1, litesploit);
 	zephir_check_temp_parameter(_0);
 	zephir_check_temp_parameter(_1);
 	zephir_check_call_status();
