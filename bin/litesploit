@@ -26,5 +26,5 @@ case "$1" in
   ;;
     *)
       php $dir/$runtime
-  s;;
+  ;;
 esac
