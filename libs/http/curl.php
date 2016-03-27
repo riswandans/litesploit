@@ -32,5 +32,15 @@
     curl_close($ch);
     return $result;
     }
-
+    
+    function curl_upload($url, $uploadfile){
+    $ch = curl_init($url);
+    curl_setopt($ch, CURLOPT_POST, true);
+    curl_setopt($ch, CURLOPT_POSTFIELDS,
+         array('Filedata'=>"@$uploadfile"));
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+    $result = curl_exec($ch);
+    curl_close($ch);
+    }
+    
 ?>
