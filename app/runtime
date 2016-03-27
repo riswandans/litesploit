@@ -1,3 +1,6 @@
 <?php
 use Litesploit\Litesploit;
-Litesploit::engine($argv[1]);
+echo "Litesploit > ";
+$handle = fopen ("php://stdin","r");
+$input = fgets($handle);
+Litesploit::engine(trim($input));

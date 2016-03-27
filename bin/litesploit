@@ -24,5 +24,7 @@ case "$1" in
       printf "Failed running exploit $2, exploit not found\n"
     fi 
   ;;
-  *)
+    *)
+      php $dir/$runtime
+  s;;
 esac
