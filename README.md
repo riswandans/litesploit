@@ -22,6 +22,10 @@ Litesploit is a library and intepreter for penetration testing tools
 * libpcre3-dev
 ```
 
+```
+sudo apt-get install -y gcc make re2c php5-dev php5-curl php5-mysql php5-json libpcre3-dev
+```
+
 ### Installation
 this installation only work for Ubuntu and debian
 ```bash
