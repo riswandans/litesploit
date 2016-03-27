@@ -40,7 +40,7 @@ PHP_METHOD(Litesploit_Libs_Input, loader) {
 	ZEPHIR_INIT_VAR(_0);
 	ZVAL_STRING(_0, "/input.start\\((.*)\\)/", ZEPHIR_TEMP_PARAM_COPY);
 	ZEPHIR_INIT_VAR(_1);
-	ZVAL_STRING(_1, "input_start($1);", ZEPHIR_TEMP_PARAM_COPY);
+	ZVAL_STRING(_1, "$inputs = fopen('php://stdin','r'); $inputs = fgets($inputs);", ZEPHIR_TEMP_PARAM_COPY);
 	ZEPHIR_CALL_FUNCTION(&_2, "preg_replace", &_3, 7, _0, _1, litesploit);
 	zephir_check_temp_parameter(_0);
 	zephir_check_temp_parameter(_1);
@@ -49,7 +49,7 @@ PHP_METHOD(Litesploit_Libs_Input, loader) {
 	ZEPHIR_INIT_NVAR(_0);
 	ZVAL_STRING(_0, "/input.close\\((.*)\\)/", ZEPHIR_TEMP_PARAM_COPY);
 	ZEPHIR_INIT_NVAR(_1);
-	ZVAL_STRING(_1, "input_close($1);", ZEPHIR_TEMP_PARAM_COPY);
+	ZVAL_STRING(_1, "fclose($inputs);", ZEPHIR_TEMP_PARAM_COPY);
 	ZEPHIR_CALL_FUNCTION(&_2, "preg_replace", &_3, 7, _0, _1, litesploit);
 	zephir_check_temp_parameter(_0);
 	zephir_check_temp_parameter(_1);
