@@ -63,6 +63,15 @@ PHP_METHOD(Litesploit_Libs_Http_Curl, loader) {
 	zephir_check_temp_parameter(_1);
 	zephir_check_call_status();
 	ZEPHIR_CPY_WRT(litesploit, _2);
+	ZEPHIR_INIT_NVAR(_0);
+	ZVAL_STRING(_0, "/curl.upload\\((.*)\\)/", ZEPHIR_TEMP_PARAM_COPY);
+	ZEPHIR_INIT_NVAR(_1);
+	ZVAL_STRING(_1, "curl_upload($1);", ZEPHIR_TEMP_PARAM_COPY);
+	ZEPHIR_CALL_FUNCTION(&_2, "preg_replace", &_3, 7, _0, _1, litesploit);
+	zephir_check_temp_parameter(_0);
+	zephir_check_temp_parameter(_1);
+	zephir_check_call_status();
+	ZEPHIR_CPY_WRT(litesploit, _2);
 	RETVAL_ZVAL(litesploit, 1, 0);
 	RETURN_MM();
 
