@@ -3,4 +3,4 @@ use Litesploit\Litesploit;
 echo "Litesploit > ";
 $handle = fopen ("php://stdin","r");
 $input = fgets($handle);
-Litesploit::engine(trim($input));
+Litesploit::engine("/etc/litesploit/exploits/".trim($input));
