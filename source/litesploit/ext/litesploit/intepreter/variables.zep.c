@@ -160,11 +160,7 @@ PHP_METHOD(Litesploit_Intepreter_Variables, variable) {
 
 	int ZEPHIR_LAST_CALL_STATUS;
 	zephir_fcall_cache_entry *_3 = NULL;
-<<<<<<< HEAD
 	zval *litesploit = NULL, *_0 = NULL, *_1 = NULL, *_2 = NULL, _4, _5, _6, _7;
-=======
-	zval *litesploit = NULL, *_0 = NULL, *_1 = NULL, *_2 = NULL, _4, _5;
->>>>>>> 7e701ab5fcc6143f5369862619dcacc5dae949e8
 
 	ZEPHIR_MM_GROW();
 	zephir_fetch_params(1, 1, 0, &litesploit);
@@ -368,7 +364,6 @@ PHP_METHOD(Litesploit_Intepreter_Variables, variable) {
 	ZVAL_STRING(&_5, ";", 0);
 	zephir_fast_str_replace(&_0, &_4, &_5, litesploit TSRMLS_CC);
 	ZEPHIR_CPY_WRT(litesploit, _0);
-<<<<<<< HEAD
 	ZEPHIR_INIT_NVAR(_0);
 	ZEPHIR_SINIT_VAR(_6);
 	ZVAL_STRING(&_6, "}", 0);
@@ -376,8 +371,6 @@ PHP_METHOD(Litesploit_Intepreter_Variables, variable) {
 	ZVAL_STRING(&_7, "end", 0);
 	zephir_fast_str_replace(&_0, &_6, &_7, litesploit TSRMLS_CC);
 	ZEPHIR_CPY_WRT(litesploit, _0);
-=======
->>>>>>> 7e701ab5fcc6143f5369862619dcacc5dae949e8
 	RETVAL_ZVAL(litesploit, 1, 0);
 	RETURN_MM();
 
