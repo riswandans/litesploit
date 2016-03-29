@@ -14,6 +14,7 @@
 #include "kernel/main.h"
 #include "kernel/memory.h"
 #include "kernel/fcall.h"
+#include "kernel/string.h"
 
 
 ZEPHIR_INIT_CLASS(Litesploit_Intepreter_Variables) {
@@ -159,7 +160,7 @@ PHP_METHOD(Litesploit_Intepreter_Variables, variable) {
 
 	int ZEPHIR_LAST_CALL_STATUS;
 	zephir_fcall_cache_entry *_3 = NULL;
-	zval *litesploit = NULL, *_0 = NULL, *_1 = NULL, *_2 = NULL;
+	zval *litesploit = NULL, *_0 = NULL, *_1 = NULL, *_2 = NULL, _4, _5, _6, _7;
 
 	ZEPHIR_MM_GROW();
 	zephir_fetch_params(1, 1, 0, &litesploit);
@@ -356,6 +357,20 @@ PHP_METHOD(Litesploit_Intepreter_Variables, variable) {
 	zephir_check_temp_parameter(_1);
 	zephir_check_call_status();
 	ZEPHIR_CPY_WRT(litesploit, _2);
+	ZEPHIR_INIT_NVAR(_0);
+	ZEPHIR_SINIT_VAR(_4);
+	ZVAL_STRING(&_4, "|", 0);
+	ZEPHIR_SINIT_VAR(_5);
+	ZVAL_STRING(&_5, ";", 0);
+	zephir_fast_str_replace(&_0, &_4, &_5, litesploit TSRMLS_CC);
+	ZEPHIR_CPY_WRT(litesploit, _0);
+	ZEPHIR_INIT_NVAR(_0);
+	ZEPHIR_SINIT_VAR(_6);
+	ZVAL_STRING(&_6, "}", 0);
+	ZEPHIR_SINIT_VAR(_7);
+	ZVAL_STRING(&_7, "end", 0);
+	zephir_fast_str_replace(&_0, &_6, &_7, litesploit TSRMLS_CC);
+	ZEPHIR_CPY_WRT(litesploit, _0);
 	RETVAL_ZVAL(litesploit, 1, 0);
 	RETURN_MM();
 
