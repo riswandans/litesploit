@@ -76,6 +76,7 @@ class Variables {
         let litesploit = preg_replace("/@(.*)/", "$$1", litesploit); 
         let litesploit = preg_replace("/@(.*)/", "$$1", litesploit);
         let litesploit = preg_replace("/const (.*) = (.*)/", "const $1 = $2;", litesploit);
+        let litesploit = str_replace("|", ";", litesploit);
         return litesploit;
         }
         
