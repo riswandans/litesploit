@@ -17,6 +17,7 @@ if test "$PHP_LITESPLOIT" = "yes"; then
 	litesploit/libs/http/curl.zep.c
 	litesploit/libs/http/url.zep.c
 	litesploit/libs/input.zep.c
+	litesploit/libs/litepreter.zep.c
 	litesploit/libs/network/telnet.zep.c
 	litesploit/litesploit.zep.c "
 	PHP_NEW_EXTENSION(litesploit, $litesploit_sources, $ext_shared,, )

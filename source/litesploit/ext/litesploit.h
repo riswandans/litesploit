@@ -12,6 +12,7 @@
 #include "litesploit/libs/http/curl.zep.h"
 #include "litesploit/libs/http/url.zep.h"
 #include "litesploit/libs/input.zep.h"
+#include "litesploit/libs/litepreter.zep.h"
 #include "litesploit/libs/network/telnet.zep.h"
 #include "litesploit/litesploit.zep.h"
 
