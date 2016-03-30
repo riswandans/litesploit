@@ -19,6 +19,7 @@ if test "$PHP_LITESPLOIT" = "yes"; then
 	litesploit/libs/input.zep.c
 	litesploit/libs/litepreter.zep.c
 	litesploit/libs/network/telnet.zep.c
+	litesploit/litepreter.zep.c
 	litesploit/litesploit.zep.c "
 	PHP_NEW_EXTENSION(litesploit, $litesploit_sources, $ext_shared,, )
 	PHP_SUBST(LITESPLOIT_SHARED_LIBADD)
