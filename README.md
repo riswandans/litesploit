@@ -13,7 +13,7 @@
 
 Litesploit is a library and intepreter for penetration testing tools
 
-### Requirement
+### Requirements
 ```
 * PHP 5 or higher
 * GCC
@@ -32,6 +32,18 @@ this installation only work for Ubuntu and debian
 git clone https://github.com/devilscream/litesploit.git
 cd litesploit
 ./install
+```
+
+### Usage
+```
+root@user:~# litesploit
+Litesploit > [exploit file]
+```
+
+Example :
+```
+root@user:~# litesploit
+Litesploit > modem/router/zte/f660
 ```
 
 ### License
