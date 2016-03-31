@@ -1,7 +1,10 @@
 <?php
 error_reporting(0);
 use Litesploit\Litesploit;
-echo "\33[1;31mLitesploit > \33[1;37m";
-$handle = fopen ("php://stdin","r");
-$input = fgets($handle);
-Litesploit::engine("/etc/litesploit/exploits/".trim($input));
+while (1) {
+    echo "\33[1;31mLitesploit > \33[1;37m";
+    $handle = fopen ("php://stdin","r");
+    $input = fgets($handle);
+    Litesploit::engine("/etc/litesploit/exploits/".trim($input));
+    continue;
+}
