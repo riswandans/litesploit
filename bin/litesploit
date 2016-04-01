@@ -14,7 +14,8 @@ printf "
 \n"
 case "$1" in
   "help")
-    echo "litesploit [exploit/file]"
+    printf "\n"
+    echo "litesploin run [exploit/file]"
   ;;
   "run")
     if [ -f "$2" ]; then
