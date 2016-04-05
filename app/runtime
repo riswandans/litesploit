@@ -2,10 +2,31 @@
 error_reporting(0);
 use Litesploit\Litesploit;
 $location_exploit = "/etc/litesploit/exploits/";
+$exploits = scan_dir($location_exploit);
+
+echo "+-------------------- [ ".$exploits['total_files']." exploits ] --------------------+\n";
 while (1) {
     echo "\33[1;31mLitesploit > \33[1;37m";
     $handle = fopen ("php://stdin","r");
     $input = fgets($handle);
     Litesploit::engine($location_exploit.trim($input));
     continue;
+}
+
+function scan_dir($path){
+    $ite=new RecursiveDirectoryIterator($path);
+
+    $bytestotal=0;
+    $nbfiles=0;
+    foreach (new RecursiveIteratorIterator($ite) as $filename=>$cur) {
+        $filesize=$cur->getSize();
+        $bytestotal+=$filesize;
+        $nbfiles++;
+        $files[] = $filename;
+    }
+
+    $bytestotal=number_format($bytestotal);
+    $nbfiles = $nbfiles - 63;
+
+    return array('total_files'=>$nbfiles,'total_size'=>$bytestotal,'files'=>$files);
 }
