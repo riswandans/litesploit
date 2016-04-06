@@ -6,7 +6,7 @@ Litesploit support for Linux like ubuntu or debian, and more distro penetration 
 |---------------|-------------|
 | Linux Ubuntu  |    Yes      |
 | Linux Debian  |    Yes      |
-| Windows       | Development |
+| Microsoft Windows       | No |
 
 ### Requirements
 ```
