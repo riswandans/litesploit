@@ -20,13 +20,10 @@ Litesploit support for Linux like ubuntu or debian, and more distro penetration 
 sudo apt-get install -y gcc make re2c php5-cli php5-dev php5-curl php5-json libpcre3-dev
 ```
 
-### Installation
-this installation only work for Ubuntu and debian
-```bash
-git clone https://github.com/devilscream/litesploit.git
-cd litesploit
-./install
-```
+### Documentations
+Installation
+* [Requirements](https://github.com/devilscream/litesploit/tree/master/docs#requirements)
+* [Install on Ubuntu/Debian](https://github.com/devilscream/litesploit/tree/master/docs#ubuntu--debian)
 
 ### Usage
 ```
