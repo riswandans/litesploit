@@ -9,19 +9,8 @@ Litesploit support for Linux like ubuntu or debian, and more distro penetration 
 | Linux Debian  |    Yes      |
 | Microsoft Windows       | No |
 
-### Requirements
-* PHP 5 or higher
-* GCC
-* Zephir lang
-* PHP-Dev
-* libpcre3-dev
-
-```
-sudo apt-get install -y gcc make re2c php5-cli php5-dev php5-curl php5-json libpcre3-dev
-```
-
 ### Documentations
-Installation
+##### Installation
 * [Requirements](https://github.com/devilscream/litesploit/tree/master/docs#requirements)
 * [Install on Ubuntu/Debian](https://github.com/devilscream/litesploit/tree/master/docs#ubuntu--debian)
 
