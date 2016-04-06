@@ -21,4 +21,4 @@ Litesploit support for Linux like ubuntu or debian, and more distro penetration 
 
 ### License
 
-The project is licensed under the [GNU GPL v3][http://www.gnu.org/licenses/gpl.html] license. Which means you're allowed to copy, edit, change, hack, use all or any part of this project *as long* as all of the changes and contributions remains under the same terms and conditions.
+The project is licensed under the [GNU GPL v3](http://www.gnu.org/licenses/gpl.html) license. Which means you're allowed to copy, edit, change, hack, use all or any part of this project *as long* as all of the changes and contributions remains under the same terms and conditions.
