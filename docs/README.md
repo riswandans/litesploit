@@ -1,6 +1,4 @@
-## Documentations
-
-### Installation
+## Installation
 
 #### Requirements
 * PHP 5 or higher
