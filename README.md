@@ -1,17 +1,12 @@
 ### Litesploit
-```
-  _        _   _                          _           _   _   
- | |      (_) | |                        | |         (_) | |  
- | |       _  | |_    ___   ___   _ __   | |   ___    _  | |_ 
- | |      | | | __|  / _ \ / __| | '_ \  | |  / _ \  | | | __|
- | |____  | | | |_  |  __/ \__ \ | |_) | | | | (_) | | | | |_ 
- |______| |_|  \__|  \___| |___/ | .__/  |_|  \___/  |_|  \__|
-                                 | |                          
-                                 |_|    
+Litesploit is a library and intepreter for penetration testing tools. This includes exploits, tools and litepreter.
+Litesploit support for Linux like ubuntu or debian, and more distro penetration testing like BackBox and Kali Linux.
 
-```
-
-Litesploit is a library and intepreter for penetration testing tools
+|   Platform    |    Support  |
+|---------------|-------------|
+| Linux Ubuntu  |    Yes      |
+| Linux Debian  |    Yes      |
+| Windows       | Development |
 
 ### Requirements
 ```
