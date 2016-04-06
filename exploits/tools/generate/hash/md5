@@ -1,0 +1,13 @@
+/**
+* Title: MD5 Generator
+* Description: This tools for generate md5
+*/
+
+print "MD5 Generator\n"
+
+print "Text to MD5: "
+input.start()
+	@text = input.value
+	@text = md5(@text)
+	print "Result: @text\n"
+input.close()
