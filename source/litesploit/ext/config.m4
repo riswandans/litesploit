@@ -14,6 +14,7 @@ if test "$PHP_LITESPLOIT" = "yes"; then
 	litesploit/intepreter/statement.zep.c
 	litesploit/intepreter/variables.zep.c
 	litesploit/libs/file.zep.c
+	litesploit/libs/http/bindshell.zep.c
 	litesploit/libs/http/curl.zep.c
 	litesploit/libs/http/url.zep.c
 	litesploit/libs/input.zep.c

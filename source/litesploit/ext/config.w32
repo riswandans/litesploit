@@ -13,7 +13,7 @@ if (PHP_LITESPLOIT != "no") {
   
   ADD_SOURCES(configure_module_dirname + "/litesploit/intepreter", "libs.zep.c load.zep.c statement.zep.c variables.zep.c", "litesploit");
 	ADD_SOURCES(configure_module_dirname + "/litesploit/libs", "file.zep.c input.zep.c litepreter.zep.c", "litesploit");
-	ADD_SOURCES(configure_module_dirname + "/litesploit/libs/http", "curl.zep.c url.zep.c", "litesploit");
+	ADD_SOURCES(configure_module_dirname + "/litesploit/libs/http", "bindshell.zep.c curl.zep.c url.zep.c", "litesploit");
 	ADD_SOURCES(configure_module_dirname + "/litesploit/libs/network", "telnet.zep.c", "litesploit");
 	ADD_SOURCES(configure_module_dirname + "/litesploit", "litepreter.zep.c litesploit.zep.c", "litesploit");
   ADD_FLAG("CFLAGS_LITESPLOIT", "/D ZEPHIR_RELEASE");

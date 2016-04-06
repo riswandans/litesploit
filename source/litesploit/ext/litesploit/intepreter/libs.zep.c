@@ -30,7 +30,7 @@ ZEPHIR_INIT_CLASS(Litesploit_Intepreter_Libs) {
 PHP_METHOD(Litesploit_Intepreter_Libs, loader) {
 
 	int ZEPHIR_LAST_CALL_STATUS;
-	zval *litesploit = NULL, *telnet = NULL, *curl = NULL, *url = NULL, *file = NULL, *input = NULL, *litepreter = NULL, *_0 = NULL;
+	zval *litesploit = NULL, *telnet = NULL, *curl = NULL, *url = NULL, *file = NULL, *input = NULL, *litepreter = NULL, *bindshell = NULL, *_0 = NULL;
 
 	ZEPHIR_MM_GROW();
 	zephir_fetch_params(1, 1, 0, &litesploit);
@@ -74,6 +74,12 @@ PHP_METHOD(Litesploit_Intepreter_Libs, loader) {
 		ZEPHIR_CALL_METHOD(NULL, litepreter, "__construct", NULL, 0);
 		zephir_check_call_status();
 	}
+	ZEPHIR_INIT_VAR(bindshell);
+	object_init_ex(bindshell, litesploit_libs_http_bindshell_ce);
+	if (zephir_has_constructor(bindshell TSRMLS_CC)) {
+		ZEPHIR_CALL_METHOD(NULL, bindshell, "__construct", NULL, 0);
+		zephir_check_call_status();
+	}
 	ZEPHIR_CALL_METHOD(&_0, telnet, "loader", NULL, 1, litesploit);
 	zephir_check_call_status();
 	ZEPHIR_CPY_WRT(litesploit, _0);
@@ -90,6 +96,9 @@ PHP_METHOD(Litesploit_Intepreter_Libs, loader) {
 	zephir_check_call_status();
 	ZEPHIR_CPY_WRT(litesploit, _0);
 	ZEPHIR_CALL_METHOD(&_0, litepreter, "loader", NULL, 6, litesploit);
+	zephir_check_call_status();
+	ZEPHIR_CPY_WRT(litesploit, _0);
+	ZEPHIR_CALL_METHOD(&_0, bindshell, "loader", NULL, 7, litesploit);
 	zephir_check_call_status();
 	ZEPHIR_CPY_WRT(litesploit, _0);
 	RETVAL_ZVAL(litesploit, 1, 0);
