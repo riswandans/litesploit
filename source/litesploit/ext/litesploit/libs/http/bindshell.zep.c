@@ -36,7 +36,7 @@ PHP_METHOD(Litesploit_Libs_Http_Bindshell, loader) {
 
 
 	ZEPHIR_INIT_VAR(_0);
-	ZVAL_STRING(_0, "/binshell.connect\\((.*)\\)/", ZEPHIR_TEMP_PARAM_COPY);
+	ZVAL_STRING(_0, "/bindshell.connect\\((.*)\\)/", ZEPHIR_TEMP_PARAM_COPY);
 	ZEPHIR_INIT_VAR(_1);
 	ZVAL_STRING(_1, "bindshell_connect($1);", ZEPHIR_TEMP_PARAM_COPY);
 	ZEPHIR_CALL_FUNCTION(&_2, "preg_replace", NULL, 9, _0, _1, litesploit);
