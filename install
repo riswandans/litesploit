@@ -8,6 +8,7 @@ cd ..
 cd source/litesploit
 zephir fullclean
 zephir build
+zephir fullclean
 
 echo "[*] Install Litesploit"
 cd ../..
