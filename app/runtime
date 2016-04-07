@@ -1,10 +1,14 @@
 <?php
 error_reporting(0);
 use Litesploit\Litesploit;
-$location_exploit = "/etc/litesploit/modules/";
-$exploits = scan_dir($location_exploit);
+$location_exploit = "/etc/litesploit/modules/exploits/";
+$location_tools = "/etc/litesploit/modules/tools/";
+$location_modules = "/etc/litesploit/modules/";
+$modules = scan_dir($location_modules,"63");
+$exploits = scan_dir($location_exploit,"50");
+$tools = scan_dir($location_tools,"0");
 
-echo "+-------------------- [ ".$exploits['total_files']." exploits ] --------------------+\n";
+echo "+----[ ".$modules['total_files']." modules ] [ ".$exploits['total_files']." exploits ] [ ".$tools['total_files']." tools ] ----------+\n";
 while (100) {
     echo "\33[1;31mLitesploit > \33[1;37m";
     $handle = fopen ("php://stdin","r");
@@ -13,7 +17,7 @@ while (100) {
     continue;
 }
 
-function scan_dir($path){
+function scan_dir($path,$minus){
     $ite=new RecursiveDirectoryIterator($path);
 
     $bytestotal=0;
@@ -26,7 +30,7 @@ function scan_dir($path){
     }
 
     $bytestotal=number_format($bytestotal);
-    $nbfiles = $nbfiles - 63;
+    $nbfiles = $nbfiles - $minus;
 
     return array('total_files'=>$nbfiles,'total_size'=>$bytestotal,'files'=>$files);
 }
