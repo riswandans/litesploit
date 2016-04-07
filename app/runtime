@@ -13,7 +13,7 @@ while (100) {
     echo "\33[1;31mLitesploit > \33[1;37m";
     $handle = fopen ("php://stdin","r");
     $input = fgets($handle);
-    Litesploit::engine($location_exploit.trim($input));
+    Litesploit::engine($location_modules.trim($input));
     continue;
 }
 
