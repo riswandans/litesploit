@@ -1,0 +1,18 @@
+/**
+* Title: MD5 Salt Generator
+* Description: This tools for generate md5 salt
+*/
+
+print "MD5 Generator\n"
+
+print "Text to MD5 Salt: "
+input.start()
+	@text = input.value
+input.close()
+
+print "Salt key: "
+input.start()
+    @salt = input.value
+	@result = md5(@salt.@text)
+	print "Result: @result\n"
+input.close()

