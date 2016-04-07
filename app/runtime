@@ -8,7 +8,7 @@ $modules = scan_dir($location_modules,"63");
 $exploits = scan_dir($location_exploit,"50");
 $tools = scan_dir($location_tools,"0");
 
-echo "+----[ ".$modules['total_files']." modules ] [ ".$exploits['total_files']." exploits ] [ ".$tools['total_files']." tools ] ----------+\n";
+echo "+------- [ ".$modules['total_files']." modules ] [ ".$exploits['total_files']." exploits ] [ ".$tools['total_files']." tools ] -------+\n";
 while (100) {
     echo "\33[1;31mLitesploit > \33[1;37m";
     $handle = fopen ("php://stdin","r");
