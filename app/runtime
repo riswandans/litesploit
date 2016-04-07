@@ -25,7 +25,7 @@ function scan_dir($path,$minus){
     foreach (new RecursiveIteratorIterator($ite) as $filename=>$cur) {
         $filesize=$cur->getSize();
         $bytestotal+=$filesize;
-        if(is_file($filename){
+        if(is_file($filename)){
             $nbfiles++;
         }
         $files[] = $filename;
