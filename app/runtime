@@ -1,7 +1,7 @@
 <?php
 error_reporting(0);
 use Litesploit\Litesploit;
-$location_exploit = "/etc/litesploit/exploits/";
+$location_exploit = "/etc/litesploit/modules/";
 $exploits = scan_dir($location_exploit);
 
 echo "+-------------------- [ ".$exploits['total_files']." exploits ] --------------------+\n";
