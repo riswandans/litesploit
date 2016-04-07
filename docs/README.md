@@ -34,5 +34,5 @@ Litesploit > [exploit file/tools]
 
 Example:
 ```
-Litesploit > modem/router/zte/f660
+Litesploit > exploits/modem/router/zte/f660
 ```
