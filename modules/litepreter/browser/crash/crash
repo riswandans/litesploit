@@ -9,5 +9,5 @@ input.close()
 print "Set Port: "
 input.start()
     @port = input.value
-    @result = litepreter.open(@ip, @port,"/etc/litesploit/modules/litepreter/crash/exploit.lite")
+    @result = litepreter.open(@ip, @port,"/etc/litesploit/modules/litepreter/browser/crash/exploit.lite")
 input.close()
