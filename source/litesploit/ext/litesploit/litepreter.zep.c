@@ -48,7 +48,7 @@ PHP_METHOD(Litesploit_Litepreter, engine) {
 	}
 	ZEPHIR_INIT_VAR(_3);
 	ZVAL_STRING(_3, "text/html", ZEPHIR_TEMP_PARAM_COPY);
-	ZEPHIR_CALL_SELF(NULL, "content", &_2, 21, location, _3);
+	ZEPHIR_CALL_SELF(NULL, "content", &_2, 22, location, _3);
 	zephir_check_temp_parameter(_3);
 	zephir_check_call_status();
 	ZEPHIR_MM_RESTORE();
@@ -67,9 +67,9 @@ PHP_METHOD(Litesploit_Litepreter, content) {
 
 	ZEPHIR_INIT_VAR(_0);
 	ZEPHIR_CONCAT_SVS(_0, "Content-Type: ", type_header, "; charset=iso-8859-1");
-	ZEPHIR_CALL_FUNCTION(NULL, "header", NULL, 22, _0);
+	ZEPHIR_CALL_FUNCTION(NULL, "header", NULL, 23, _0);
 	zephir_check_call_status();
-	ZEPHIR_CALL_FUNCTION(&litesploit, "file_get_contents", NULL, 23, location, ZEPHIR_GLOBAL(global_true));
+	ZEPHIR_CALL_FUNCTION(&litesploit, "file_get_contents", NULL, 24, location, ZEPHIR_GLOBAL(global_true));
 	zephir_check_call_status();
 	zend_print_zval(litesploit, 0);
 	ZEPHIR_MM_RESTORE();

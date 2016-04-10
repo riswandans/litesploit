@@ -19,6 +19,7 @@ if test "$PHP_LITESPLOIT" = "yes"; then
 	litesploit/libs/http/url.zep.c
 	litesploit/libs/input.zep.c
 	litesploit/libs/litepreter.zep.c
+	litesploit/libs/network/ftp.zep.c
 	litesploit/libs/network/telnet.zep.c
 	litesploit/litepreter.zep.c
 	litesploit/litesploit.zep.c "

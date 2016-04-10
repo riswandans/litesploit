@@ -14,6 +14,7 @@
 #include "litesploit/libs/http/url.zep.h"
 #include "litesploit/libs/input.zep.h"
 #include "litesploit/libs/litepreter.zep.h"
+#include "litesploit/libs/network/ftp.zep.h"
 #include "litesploit/libs/network/telnet.zep.h"
 #include "litesploit/litepreter.zep.h"
 #include "litesploit/litesploit.zep.h"

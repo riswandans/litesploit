@@ -35,7 +35,7 @@ PHP_METHOD(Litesploit_Litesploit, engine) {
 
 
 
-	ZEPHIR_CALL_SELF(NULL, "executecode", &_0, 24, location);
+	ZEPHIR_CALL_SELF(NULL, "executecode", &_0, 25, location);
 	zephir_check_call_status();
 	ZEPHIR_MM_RESTORE();
 
@@ -75,18 +75,18 @@ PHP_METHOD(Litesploit_Litesploit, executecode) {
 		ZEPHIR_CALL_METHOD(NULL, libraries, "__construct", NULL, 0);
 		zephir_check_call_status();
 	}
-	ZEPHIR_CALL_FUNCTION(&litesploit, "file_get_contents", NULL, 23, location, ZEPHIR_GLOBAL(global_true));
+	ZEPHIR_CALL_FUNCTION(&litesploit, "file_get_contents", NULL, 24, location, ZEPHIR_GLOBAL(global_true));
 	zephir_check_call_status();
-	ZEPHIR_CALL_METHOD(&_0, libraries, "loader", NULL, 25, litesploit);
-	zephir_check_call_status();
-	ZEPHIR_CPY_WRT(litesploit, _0);
-	ZEPHIR_CALL_METHOD(&_0, variables, "loader", NULL, 26, litesploit);
+	ZEPHIR_CALL_METHOD(&_0, libraries, "loader", NULL, 26, litesploit);
 	zephir_check_call_status();
 	ZEPHIR_CPY_WRT(litesploit, _0);
-	ZEPHIR_CALL_METHOD(&_0, load, "loader", NULL, 27, litesploit);
+	ZEPHIR_CALL_METHOD(&_0, variables, "loader", NULL, 27, litesploit);
 	zephir_check_call_status();
 	ZEPHIR_CPY_WRT(litesploit, _0);
-	ZEPHIR_CALL_METHOD(&_0, statement, "loader", NULL, 28, litesploit);
+	ZEPHIR_CALL_METHOD(&_0, load, "loader", NULL, 28, litesploit);
+	zephir_check_call_status();
+	ZEPHIR_CPY_WRT(litesploit, _0);
+	ZEPHIR_CALL_METHOD(&_0, statement, "loader", NULL, 29, litesploit);
 	zephir_check_call_status();
 	ZEPHIR_CPY_WRT(litesploit, _0);
 	ZEPHIR_INIT_VAR(_1);
